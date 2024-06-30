@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bh0ma040k4kyh"]
+[gd_scene load_steps=13 format=3 uid="uid://bh0ma040k4kyh"]
 
 [ext_resource type="Texture2D" uid="uid://l252ee7yhjxi" path="res://sprites/SNES_-_Super_Mario_World_-_Mario-export.png" id="1_2rdow"]
 [ext_resource type="Script" path="res://scripts/mario.gd" id="1_mhgev"]
@@ -6,6 +6,10 @@
 [sub_resource type="AtlasTexture" id="AtlasTexture_x88cd"]
 atlas = ExtResource("1_2rdow")
 region = Rect2(24, 45, 15, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyh0p"]
+atlas = ExtResource("1_2rdow")
+region = Rect2(336, 44, 16, 27)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rtgd3"]
 atlas = ExtResource("1_2rdow")
@@ -39,6 +43,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tyh0p")
+}],
+"loop": true,
+"name": &"jump",
 "speed": 5.0
 }, {
 "frames": [{
@@ -80,7 +92,7 @@ script = ExtResource("1_mhgev")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(2, 25)
 sprite_frames = SubResource("SpriteFrames_4t4x4")
-animation = &"walk"
+animation = &"jump"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -90,3 +102,4 @@ shape = SubResource("CircleShape2D_1cac4")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-1, 24)
 zoom = Vector2(2, 2)
+limit_bottom = 185
