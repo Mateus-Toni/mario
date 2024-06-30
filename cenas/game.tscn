@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0uiuou5hm1g8"]
+
+[ext_resource type="PackedScene" uid="uid://bh0ma040k4kyh" path="res://cenas/mario.tscn" id="1_agmr0"]
+
+[node name="Game" type="Node2D"]
+
+[node name="mario" parent="." instance=ExtResource("1_agmr0")]
