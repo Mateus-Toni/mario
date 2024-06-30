@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://bh0ma040k4kyh"]
+[gd_scene load_steps=12 format=3 uid="uid://bh0ma040k4kyh"]
 
 [ext_resource type="Texture2D" uid="uid://l252ee7yhjxi" path="res://sprites/SNES_-_Super_Mario_World_-_Mario-export.png" id="1_2rdow"]
+[ext_resource type="Script" path="res://scripts/mario.gd" id="1_mhgev"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x88cd"]
 atlas = ExtResource("1_2rdow")
@@ -73,6 +74,8 @@ animations = [{
 radius = 7.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+z_index = 5
+script = ExtResource("1_mhgev")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(2, 25)
