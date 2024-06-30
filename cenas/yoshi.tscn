@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=8 format=3 uid="uid://cmbxq6sxf8yis"]
+=======
+[gd_scene load_steps=5 format=3 uid="uid://dqpsvo687eq3r"]
+>>>>>>> 7e7243e39c9dacc1585cf8fec48bcda6a3bd2b66
 
 [ext_resource type="Texture2D" uid="uid://dxka330isouoh" path="res://sprites/yoshi/yoshi-jump.png" id="1_tweh4"]
 
