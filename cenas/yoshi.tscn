@@ -1,10 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmbxq6sxf8yis"]
-
+[gd_scene load_steps=9 format=3 uid="uid://dqpsvo687eq3r"]
+[ext_resource type="Script" path="res://scripts/yoshi.gd" id="1_3d5xd"]
 [ext_resource type="Texture2D" uid="uid://dxka330isouoh" path="res://sprites/yoshi/yoshi-jump.png" id="1_tweh4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sy5eu"]
 radius = 7.0
-height = 18.0
+height = 28.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2j38e"]
 atlas = ExtResource("1_tweh4")
@@ -29,7 +29,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_2j38e")
 }],
 "loop": true,
-"name": &"iddle",
+"name": &"idle",
 "speed": 5.0
 }, {
 "frames": [{
@@ -48,12 +48,12 @@ animations = [{
 }]
 
 [node name="yoshi" type="CharacterBody2D"]
+script = ExtResource("1_3d5xd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3, 14)
+position = Vector2(-4, 9)
 shape = SubResource("CapsuleShape2D_sy5eu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_mvwvc")
-animation = &"iddle"
-frame_progress = 0.741095
+animation = &"idle"
