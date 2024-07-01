@@ -6595,6 +6595,9 @@ script = ExtResource("1_djk1n")
 
 [node name="mario" parent="." instance=ExtResource("1_agmr0")]
 
+[node name="RayCast2D" type="RayCast2D" parent="mario"]
+target_position = Vector2(1, 44)
+
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(15, -9)
 tile_set = SubResource("TileSet_f5rh5")
