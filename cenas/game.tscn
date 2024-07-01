@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://c0uiuou5hm1g8"]
+[gd_scene load_steps=9 format=3 uid="uid://c0uiuou5hm1g8"]
 
 [ext_resource type="PackedScene" uid="uid://bh0ma040k4kyh" path="res://cenas/mario.tscn" id="1_agmr0"]
 [ext_resource type="Texture2D" uid="uid://cg52bbqcutq3f" path="res://sprites/142763.png" id="2_0phcx"]
 [ext_resource type="Texture2D" uid="uid://cr8pytck87t5d" path="res://sprites/137311.png" id="3_syh6m"]
 [ext_resource type="PackedScene" uid="uid://dqpsvo687eq3r" path="res://cenas/yoshi.tscn" id="4_ce0ec"]
+[ext_resource type="PackedScene" uid="uid://ied0i2a54g8h" path="res://cenas/coin.tscn" id="5_rnlnu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rlpxp"]
 texture = ExtResource("2_0phcx")
@@ -2084,6 +2085,7 @@ texture = ExtResource("3_syh6m")
 187:21/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 187:21/0/physics_layer_0/angular_velocity = 0.0
 187:21/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+187:21/0/physics_layer_0/polygon_0/one_way = true
 188:21/0 = 0
 188:21/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 188:21/0/physics_layer_0/angular_velocity = 0.0
@@ -2100,6 +2102,7 @@ texture = ExtResource("3_syh6m")
 191:21/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 191:21/0/physics_layer_0/angular_velocity = 0.0
 191:21/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+191:21/0/physics_layer_0/polygon_0/one_way = true
 192:21/0 = 0
 192:21/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 192:21/0/physics_layer_0/angular_velocity = 0.0
@@ -6601,3 +6604,23 @@ layer_0/tile_data = PackedInt32Array(262136, 1, 24, 262137, 1, 24, 262138, 1, 24
 
 [node name="yoshi" parent="." instance=ExtResource("4_ce0ec")]
 position = Vector2(37, 20)
+
+[node name="coin" type="Node" parent="."]
+
+[node name="Area2D3" parent="coin" instance=ExtResource("5_rnlnu")]
+position = Vector2(143, -40)
+
+[node name="Area2D6" parent="coin" instance=ExtResource("5_rnlnu")]
+position = Vector2(-249, 19)
+
+[node name="Area2D5" parent="coin" instance=ExtResource("5_rnlnu")]
+position = Vector2(401, 22)
+
+[node name="Area2D4" parent="coin" instance=ExtResource("5_rnlnu")]
+position = Vector2(59, -87)
+
+[node name="Area2D2" parent="coin" instance=ExtResource("5_rnlnu")]
+position = Vector2(143, -126)
+
+[node name="Area2D" parent="coin" instance=ExtResource("5_rnlnu")]
+position = Vector2(102, -125)
