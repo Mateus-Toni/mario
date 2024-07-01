@@ -40,18 +40,23 @@ func normal_movement():
 		direction.y += 1
 	elif Input.is_action_pressed("ui_up"):
 		direction.y -= 1
-		
-	move_and_slide(direction * speed)
+	move_and_slide()
 
 func mounted_movement():
-	if mount:
-		mount.move_and_slide(Vector2(velocity_x, velocity_y))
+	if yoshi:
+		yoshi.move_and_slide()
 
 func find_and_mount():
 	var mount_instance = get_tree().get_root().find_node("Mount", true, false)
 	is_mounted = true
 	animated_sprite.play("mounted")
-	
+
+func dismount():
+	if yoshi:
+		is_mounted = false
+		remove_child(yoshi)
+		yoshi.get_node("PlayerSprite").show()
+		yoshi = null
 
 
 func decide_action(direction):
